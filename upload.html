@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload document </title>
+    <link rel="stylesheet" href="uploadcss.css">
+</head>
+<body>
+    <div class="header">
+        <h1>
+        UPLOAD DOCUMENTS
+        </h1>
+    </div>
+    <div class="field">
+        <input type="radio" onchange="showform(this.value)" name="type" id="" value="papers">EXAM  PAPERS &#160;
+        <input type="radio" onchange="showform(this.value)" name="type" id="" value="notes">NOTES &#160;
+    </div><br><br>
+    <div class="notesuploadform" style="display: none;">
+        <form action="upload_notes.php" method="post" enctype="multipart/form-data">
+            <label for="branch">choose branch</label>
+            
+            <!---  BRANCHES ---------------->
+            <select name="branch" id="branch">
+                <option value="cse">Computer Science and Engineering</option>
+                <option value="ece">Electronics and Communication Engineering	</option>
+                <option value="cseai">CSE-Artificial Intelligence and Machine Learning	</option>
+                <option value="cyber">CSE- Cyber Security	</option>
+                <option value="data">CSE- Data Science	</option>
+                <option value="aiml">Artificial Intelligence and Machine Learning	</option>
+                <option value="it">Information Technology	</option>
+                <option value="csit">Computer science and Information Technology	</option>
+                <option value="aero">Aeronautical Engineering	</option>
+                <option value="mech">Mechanical Engineering	</option>
+                <option value="eee">Electrical and Electronics Engineering</option>
+            </select><br><br>
+            
+            <label for="subject_name">Title : </label>
+            <input class="text-box" type="text" name="subject_name" id="subject_name" required><br><br>
+            
+            <!--
+            <label for="unitnumber">unit number</label>
+            <input class="text-box" type="number" name="unitnumber" id="unitnumber" required><br><br>
+            -->
+            
+            <label for="document" class="effect"> upload document</label><br><br>
+            <input type="file" class="filecss" name="document" id="documnet" required><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <div class="exampaperuploadform" style="display: none;">
+        <form action="upload_exam_paper.php" method="post" enctype="multipart/form-data">
+            
+            <label for="branch">choose branch</label>
+            <!---  BRANCHES ---------------->
+            <select name="branch" id="branch">
+                <option value="cse">Computer Science and Engineering</option>
+                <option value="ece">Electronics and Communication Engineering	</option>
+                <option value="cseai">CSE-Artificial Intelligence and Machine Learning	</option>
+                <option value="cyber">CSE- Cyber Security	</option>
+                <option value="data">CSE- Data Science	</option>
+                <option value="aiml">Artificial Intelligence and Machine Learning	</option>
+                <option value="it">Information Technology	</option>
+                <option value="csit">Computer science and Information Technology	</option>
+                <option value="aero">Aeronautical Engineering	</option>
+                <option value="mech">Mechanical Engineering	</option>
+                <option value="eee">Electrical and Electronics Engineering</option>
+            </select><br><br>
+            
+            <label for="exam-type">choose exam type</label>
+            <select name="exam-type" id="exam-type">
+                <option value="mid-1">mid-1</option>
+                <option value="mid-2">mid-2</option>
+                <option value="semister">semister(regular)</option>
+                <option value="supply">supplimentry</option>
+            </select><br><br>
+            <label for="subject_name">subject name</label>
+            <input class="text-box" type="text" name="subject_name"  id="subject_name"><br><br>
+            
+            <label for="fname">choose a year : </label>
+                <select name="year-selected" id="year-selected">
+                    <option value="2020-2021">2018-2019</option>
+                    <option value="2021-2022">2019-2020</option>
+                    <option value="2020-2021">2020-2021</option>
+                    <option value="2021-2022">2021-2022</option>
+                </select><br><br>
+            <label for="fileofexam" class="effect">uplaod document</label><br><br>
+            <input type="file" class="filecss" name="fileofexam" id="fileofexam"><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+<script>
+    function showform(name){
+        if(name=="notes"){
+            document.getElementsByClassName('notesuploadform')[0].style.display="block";
+            document.getElementsByClassName('exampaperuploadform')[0].style.display="none";
+        }
+        else{
+            document.getElementsByClassName('notesuploadform')[0].style.display="none";
+            document.getElementsByClassName('exampaperuploadform')[0].style.display="block";
+        }
+    }
+</script>
+</body>
+</html>
