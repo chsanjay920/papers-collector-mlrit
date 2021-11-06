@@ -42,8 +42,6 @@
 
 .field{
     text-align: center;
-    color:#6c757d;
-    font-family: 'Prompt', sans-serif;
 }
 .notesuploadform{
     text-align: center;
@@ -54,21 +52,18 @@
 
 .field label{
     font-family: cursive;
-    
 }
 .field input[type=radio] {
    cursor: pointer; 
   user-select:none;
     height: 1.2rem;
     width: 2rem;
-    
 }
 
 .notesuploadform label{
    font-family: 'Prompt', sans-serif;
-    color:#6c757d;
+    color: rgb(59, 55, 55);
     text-shadow: -3px 3px rgba(0,0,0,0.1);
-    
 }
 .text-box{
   margin: 0.5em auto;
@@ -89,7 +84,7 @@
     padding: 10px;
     width: 8rem;
     border-radius: 3rem;
-    color:#495057;
+    color: rgb(59, 55, 55);
   background-color: #D7E9F7;
   border: 1px solid #CEE5D0;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -106,30 +101,15 @@
     padding: 10px;
     width: 20rem;
     border-radius: 3rem;
-     color:#6c757d;
+    color: rgb(59, 55, 55);
 
 }
-.notesuploadform select{
-    margin-bottom: 1em;
-    padding: .25em;
-    border: 0;
-    border-bottom: 3px solid currentcolor; 
-    font-weight: bold;
-    letter-spacing: .15em;
-    border-radius: 0;
-    
-    &:focus, &:active {
-        outline: 0;
-        border-bottom-color: red;
-        
-    }
-}
+
 
 .exampaperuploadform label{
    font-family: 'Prompt', sans-serif;
-    color:#6c757d;
+    color: rgb(59, 55, 55);
     text-shadow: -3px 3px rgba(0,0,0,0.1);
-    
 }
 .exampaperuploadform input[type=submit]{
     font-family: 'Prompt', sans-serif;
@@ -154,7 +134,11 @@
     padding: 10px;
     width: 20rem;
     border-radius: 3rem;
-    color:#6c757d;
+    color: rgb(59, 55, 55);
+
+}
+.exampaperuploadform input[type=date]{
+    font-size: 1.2rem;
 
 }
 .exampaperuploadform select{
@@ -165,63 +149,66 @@ margin-bottom: 1em;
     font-weight: bold;
     letter-spacing: .15em;
     border-radius: 0;
-    
-    &:focus, &:active {
+}
+    .exampaperuploadform :focus, .exampaperuploadform:active {
         outline: 0;
         border-bottom-color: red;
-        
     }
+
+.notesuploadform select{
+margin-bottom: 1em;
+    padding: .25em;
+    border: 0;
+    border-bottom: 3px solid currentcolor; 
+    font-weight: bold;
+    letter-spacing: .15em;
+    border-radius: 0;
 }
-.filecss{
-    
-}
-.filecss::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.filecss::before {
-  content: 'Select file';
+
+.buttons button{
+    font-family: 'Prompt', sans-serif;
+    color: rgb(59, 55, 55);
+    text-shadow: -3px 3px rgba(0,0,0,0.1);
+    padding: 8px 5px;
+  text-align: center;
   display: inline-block;
-  background: linear-gradient(top, #f9f9f9, #e3e3e3);
-  border: 3px solid #999;
-  border-radius: 8px;
-  padding:5px 8px;
-  outline: none;
-  white-space: nowrap;
-  -webkit-user-select: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
   cursor: pointer;
-  text-shadow: 1px 1px #fff;
-  font-weight: 700;
-  font-size: 10pt;
-margin-right: -6rem;
+  background-color: white; 
+  border: 2px solid #2EE59D;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin-bottom:5px;
 }
-.filecss:hover::before {
-  border-color: black;
-     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-}
-.filecss:active::before {
-  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-    
+.buttons button:hover{
+  background-color: #2EE59D;
+  color: white;
 }
 
-/*effect-underline*/
-.effect:after {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  height: 1em;
-  width: 100%;
-    left: 0;
-  border-bottom: 1px solid;
-  margin-top: 10px;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale(0,1);
-  transform: scale(0,1);
+.notesuploadform input[type=text]{
+    width: 30%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 }
-
-.effect:hover:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+.notesuploadform input[type=text]:focus{
+    border: 3px solid #555;
+}
+.exampaperuploadform input[type=text]{
+    width: 30%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+.exampaperuploadform input[type=text]:focus{
+    border: 3px solid #555;
 }
